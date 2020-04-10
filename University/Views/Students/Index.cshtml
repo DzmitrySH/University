@@ -1,5 +1,4 @@
-﻿@*@model IEnumerable<University.Models.Student>*@
-@model PaginatedList<University.Models.Student>
+﻿@model PaginatedList<University.Models.Student>
     @{
         ViewData["Title"] = "Index";
     }
@@ -7,30 +6,17 @@
     <h1>Студент</h1>
 
     <p>
-        <a asp-action="Create">Добавить</a>
-        <a asp-action="Index">Назад к полному списку</a>
+        <a class="btn btn-primary" asp-action="Create">Добавить</a>
+        <a class="btn btn-info" asp-action="Index">Назад к полному списку</a>
     </p>
-
-    @*<form asp-action="Index" method="get">
-        <div class="form-actions no-color">
-            <p>
-                Поиск по Знаку: <input type="text" name="SearchString" value="@ViewData["currentFilter"]" />
-                <input type="submit" value="Поиск" class="btn btn-light" />
-                <a asp-action="Index">Назад к полному списку</a>
-            </p>
-        </div>
-    </form>*@
 
     <table class="table">
         <thead>
             <tr>
                 <th>
-                    @*@Html.DisplayNameFor(model => model.LastName)*@
                     Имя
                 </th>
                 <th>
-                    @*@Html.DisplayNameFor(model => model.FirstMidName)*@
-                    @*Фамилия*@
                     <a asp-action="Index"
                        asp-route-sortOrder="@ViewData["NameSortParm"]"
                        asp-route-currentFilter="@ViewData["CurrentFilter"]">
@@ -38,8 +24,6 @@
                     </a>
                 </th>
                 <th>
-                    @*@Html.DisplayNameFor(model => model.EnrollmentDate)*@
-                    @*Дата Поступления*@
                     <a asp-action="Index"
                        asp-route-sortOrder="@ViewData["DateSortParm"]"
                        asp-route-currentFilter="@ViewData["CurrentFilter"]">
@@ -63,9 +47,9 @@
                         @Html.DisplayFor(modelItem => item.EnrollmentDate)
                     </td>
                     <td>
-                        <a asp-action="Edit" asp-route-id="@item.ID">Изменить</a> |
-                        <a asp-action="Details" asp-route-id="@item.ID">Детали</a> |
-                        <a asp-action="Delete" asp-route-id="@item.ID">Удалить</a>
+                        <a class="btn btn-secondary" asp-action="Edit" asp-route-id="@item.ID">Изменить</a>
+                        <a class="btn btn-info" asp-action="Details" asp-route-id="@item.ID">Детали</a>
+                        <a class="btn btn-danger" asp-action="Delete" asp-route-id="@item.ID">Удалить</a>
                     </td>
                 </tr>
             }
@@ -81,13 +65,13 @@
        asp-route-sortOrder="@ViewData["CurrentSort"]"
        asp-route-pageNumber="@(Model.PageIndex - 1)"
        asp-route-currentFilter="@ViewData["CurrentFilter"]"
-       class="btn btn-default @prevDisabled">
+       class="btn btn-light @prevDisabled">
         Предыдущий
     </a>
     <a asp-action="Index"
        asp-route-sortOrder="@ViewData["CurrentSort"]"
        asp-route-pageNumber="@(Model.PageIndex + 1)"
        asp-route-currentFilter="@ViewData["CurrentFilter"]"
-       class="btn btn-default @nextDisabled">
+       class="btn btn-light @nextDisabled">
         Следующий
     </a>

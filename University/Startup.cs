@@ -30,7 +30,15 @@ namespace University
             services.AddDbContext<UniversityContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            services.AddMvc(options =>
+            {
+                options.CacheProfiles.Add("Default_268",
+                    new CacheProfile()
+                    {
+                        Duration = 268               //4 минуты 28 сек
+                    });
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

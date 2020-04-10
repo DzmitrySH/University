@@ -12943,11 +12943,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Dmitry\\source\\repos\\University\\University\\University.csproj",
+      "projectUniqueName": "D:\\ВУЗ\\Разработка приложений баз данных для информационных систем\\лабораторные\\University\\University\\University.csproj",
       "projectName": "University",
-      "projectPath": "C:\\Users\\Dmitry\\source\\repos\\University\\University\\University.csproj",
+      "projectPath": "D:\\ВУЗ\\Разработка приложений баз данных для информационных систем\\лабораторные\\University\\University\\University.csproj",
       "packagesPath": "C:\\Users\\Dmitry\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Dmitry\\source\\repos\\University\\University\\obj\\",
+      "outputPath": "D:\\ВУЗ\\Разработка приложений баз данных для информационных систем\\лабораторные\\University\\University\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Microsoft\\Xamarin\\NuGet\\",

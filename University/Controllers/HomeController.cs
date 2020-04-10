@@ -32,6 +32,7 @@ namespace University.Controllers
 
             return View(await data.AsNoTracking().ToListAsync());
         }
+        [ResponseCache(CacheProfileName = "Default_268")]
         public IActionResult Index()
         {
             return View();
